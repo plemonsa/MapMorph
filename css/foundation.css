@@ -6,7 +6,8 @@
  * Licensed under MIT Open Source
  */
 
-####begin holy grail code
+/*begin holy grail*/
+
 .holy-grail-grid {
   display: -ms-grid;
   display: grid;
@@ -78,8 +79,8 @@
       grid-column-start: 1;
   grid-column-end: 4;
 }
+/*end holy grail*/
 
-####end Holy Grail code
 
 
 
