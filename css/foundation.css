@@ -2555,8 +2555,8 @@ ul.no-bullet, ol.no-bullet {
   line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: #1779ba;
-  color: #E8BA10; }
+  background-color: #E8BA10;
+  color: #FFFFFF; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
