@@ -26,7 +26,12 @@
   }
 }
 
-.holy-grail-header,
+.holy-grail-header {
+  padding: 1rem;
+  border: 1px solid #191919;
+  background-color: #F4C92A;
+}
+
 .holy-grail-left,
 .holy-grail-middle,
 .holy-grail-right,
