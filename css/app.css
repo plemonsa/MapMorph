@@ -17,7 +17,6 @@
   }
 }
 
-.holy-grail-header,
 .holy-grail-left,
 .holy-grail-middle,
 .holy-grail-right,
@@ -26,6 +25,13 @@
   border: 1px solid #191919;
   background-color: #393939;
 }
+
+.holy-grail-header {
+  padding: 1rem;
+  border: 1px solid #F4C92A;
+  background-color: #F4C92A;
+}
+
 
 .holy-grail-header {
   -ms-grid-column: 1;
