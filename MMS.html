@@ -32,23 +32,37 @@
            <h3>Content</h3>
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
-           <div id='map'></div>
-              <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-                const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
-                center: [33.630674, -1.064438],
-                zoom: 2.3
-                });
-              </script>
-            </div>
+         </div>
           
           <div class="holy-grail-right">
             <h3>Helpful Links</h3>
             <ul>
               <li><a href="http://macromorphoscopic.com/">Macromorphoscopic Project</a></li>
             </ul>
+          </div>
+          
+          <div class="holy-grail-middle">
+            <meta charset='utf-8' />
+            <title>Display a map</title>
+            <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+            <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+            <style>
+              body { margin:0; padding:0; }
+              #map { position:fixed; top:0; bottom:0; width:100%; }
+            </style>
+
+            <div id='map'></div>
+            <script>
+             mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+             const map = new mapboxgl.Map({
+               container: 'map',
+                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+                center: [33.630674, -1.064438],
+                zoom: 2.3
+            });
+            </script>
+            </div>
           </div>
           
           <div class="holy-grail-footer">
