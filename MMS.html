@@ -41,32 +41,7 @@
             </ul>
           </div>
           
-          <div class="holy-grail-middle">
-            <meta charset='utf-8' />
-            <title>Display a map</title>
-            <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-            <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-            <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-            <style>
-              body { margin:0; padding:0; }
-              #map { position:fixed; top:0; bottom:0; width:100%; }
-            </style>
-
-            <div id='map'></div>
-            <script>
-             mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-             const map = new mapboxgl.Map({
-               container: 'map',
-                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
-                center: [33.630674, -1.064438],
-                zoom: 2.3
-            });
-            <div class='map-overlay' id='features'><h2>US population density</h2><div id='pd'><p>Hover over a state!</p></div></div>
-            <div class='map-overlay' id='legend'></div>
-            </script>
-            </div>
-          </div>
-          
+                    
           <div class="holy-grail-footer">
             <p>Continue to the next page to take a quiz and access additional learning tools. <p>
             <p><a href="Learning.html" class="button">Learning Tools</a><br/></p>
