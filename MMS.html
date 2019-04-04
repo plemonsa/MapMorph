@@ -32,7 +32,17 @@
            <h3>Content</h3>
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
-         </div>
+           <div id='map'></div>
+              <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+                const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+                center: [33.630674, -1.064438],
+                zoom: 2.3
+                });
+              </script>
+            </div>
           
           <div class="holy-grail-right">
             <h3>Helpful Links</h3>
