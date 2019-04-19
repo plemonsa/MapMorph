@@ -40,42 +40,49 @@
            <h3>Content</h3>
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
-           <ul class="small-block-grid-3">
+           <ul class="small-block-grid-2">
               <div id='NAWmap' style='width: 350px; height: 350px; top: 0px; bottom: 20px'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+                const NAWmap = new mapboxgl.Map({
+                container: 'NAWmap',
+                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+                center: [33.991153, 0.331443],
+                zoom: 1
+                });
+                </script> 
+              <div id='ANSmap' style='width: 350px; height: 350px; top: 0px; bottom: 20px'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+                const ANSmap = new mapboxgl.Map({
+                container: 'ANSmap',
+                style: 'mapbox://styles/plemonsa/cjuo8gqcg0a1s1foj2ve4h2q2',
+                center: [33.991153, 0.331443],
+                zoom: 1
+                });
+                </script>
+            </ul>
+           <ul class="small-block-grid-2">
+             <div id='IOBmap' style='width: 350px; height: 350px; top: 0px; bottom: 20px'></div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+                const IOBmap = new mapboxgl.Map({
+                container: 'IOBmap',
+                style: 'mapbox://styles/plemonsa/cjuo8gm8y08as1fpny5mbndva',
+                center: [33.991153, 0.331443],
+                zoom: 1
+                });
+                </script>
+             <div id='PSmap' style='width: 350px; height: 350px; top: 0px; bottom: 20px'></div>
               <script>
               mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-              const NAWmap = new mapboxgl.Map({
-              container: 'NAWmap',
-              style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+              const PSmap = new mapboxgl.Map({
+              container: 'PSmap',
+              style: 'mapbox://styles/plemonsa/cjuo8gg6eajj51fl92mvxs6lr',
               center: [33.991153, 0.331443],
               zoom: 1
               });
-              </script> 
-                <div id='ANSmap'></div>
-              <script>
-              mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-              const ANSmap = new mapboxgl.Map({
-              container: 'ANSmap',
-              style: 'mapbox://styles/plemonsa/cjuo8gqcg0a1s1foj2ve4h2q2',
-              center: [33.991153, 0.331443],
-              zoom: 2
-              });
               </script>
-    <div id='IOBmap'></div>
-              <script>
-              mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-              const IOBmap = new mapboxgl.Map({
-              container: 'IOBmap',
-              style: 'mapbox://styles/plemonsa/cjuo8gm8y08as1fpny5mbndva',
-              center: [33.991153, 0.331443],
-              zoom: 2
-              });
-              </script>
-          </ul>
-          <ul class="small-block-grid">
-              <li><img src="https://lh3.googleusercontent.com/-Y38mnelSQEI/WYtybPgQZwI/AAAAAAAAFV0/CqvkAt0NXt4-yotexlycwhU092_mMDNKACLIBGAYYCw/w317-h238-k-no/"></li>
-              <li><img src="https://lh3.googleusercontent.com/-Y38mnelSQEI/WYtybPgQZwI/AAAAAAAAFV0/CqvkAt0NXt4-yotexlycwhU092_mMDNKACLIBGAYYCw/w317-h238-k-no/"></li>
-              <li><img src="https://lh3.googleusercontent.com/-Y38mnelSQEI/WYtybPgQZwI/AAAAAAAAFV0/CqvkAt0NXt4-yotexlycwhU092_mMDNKACLIBGAYYCw/w317-h238-k-no/"></li>
           </ul>
           </div>
           
