@@ -14,7 +14,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
         <style>
         body { margin:0; padding:0; }
-        </style>
+    </style>
   </head>
  
    <body>
@@ -48,16 +48,27 @@
             </ul>
           </div>
     
- <div id='map'></div>
+    <div id='NAWmap'></div>
               <script>
               mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-              const map = new mapboxgl.Map({
-              container: 'map',
+              const NAWmap = new mapboxgl.Map({
+              container: 'NAWmap',
               style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
               center: [-22.879968, 2.405393],
               zoom: 3.5
               });
-              </script>    
+              </script>   
+    <div id='ANSmap'></div>
+              <script>
+              mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+              const ANSmap = new mapboxgl.Map({
+              container: 'ANSmap',
+              style: 'mapbox://styles/plemonsa/cjuo8gqcg0a1s1foj2ve4h2q2',
+              center: [33.991153, 0.331443],
+              zoom: 2.2
+              });
+              </script>
+
                     
           <div class="holy-grail-footer">
             <p>Continue to the next page to take a quiz and access additional learning tools. <p>
