@@ -51,7 +51,18 @@
               </script>    
          </div>
    
-          
+         <div class="holy-grail-middle">
+         <div id='map'></div>
+              <script>
+              mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+              const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+              center: [-22.879968, 2.405393],
+              zoom: 3.5
+              });
+              </script>    
+         </div>
           
           <div class="holy-grail-right">
             <h3>Helpful Links</h3>
