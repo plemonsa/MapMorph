@@ -52,6 +52,21 @@
                 center: [20, 0.331443],
                 zoom: 1.5
                 });
+                  
+                  for (i = 0; i < layers.length; i++) {
+                  var layer = layers[i];
+                  var color = colors[i];
+                  var item = document.createElement('div');
+                  var key = document.createElement('span');
+                  key.className = 'legend-key';
+                  key.style.backgroundColor = color;
+
+                  var value = document.createElement('span');
+                  value.innerHTML = layer;
+                  item.appendChild(key);
+                  item.appendChild(value);
+                  legend.appendChild(item);
+                }
                 </script> 
               <div id='ANSmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
