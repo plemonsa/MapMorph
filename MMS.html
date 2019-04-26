@@ -41,7 +41,7 @@
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
               <div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
-              <div class='map-overlay' id='features'><h2>Nasal Aperture Width Frequencies</h2>
+              <div class='map-overlay' id='features'><h2>Nasal Aperture Width</h2>
               <div id='pd'><p>Hover over a country!</p></div></div>
               <div class='map-overlay' id='legend'></div>
                 <script>
@@ -62,10 +62,10 @@ map.on('mousemove', function(e) {
     layers: ['NAW']
   });
 
-  if (NAW.length > 0) {
-    document.getElementById('pd').innerHTML = '<h3><strong>' + NAW[0].properties.name + '</strong></h3><p><strong><em>' + NAW[0].properties.density + '</strong> people per square mile</em></p>';
+  if (countries.length > 0) {
+    document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> people per square mile</em></p>';
   } else {
-    document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+    document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
   }
 });
 
