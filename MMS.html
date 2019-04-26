@@ -57,21 +57,6 @@ map.on('load', function() {
   var layers = ['0-25', '26-50', '51-75', '76-100'];
   var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
   
-for (i = 0; i < layers.length; i++) {
-  var layer = layers[i];
-  var color = colors[i];
-  var item = document.createElement('div');
-  var key = document.createElement('span');
-  key.className = 'legend-key';
-  key.style.backgroundColor = color;
-
-  var value = document.createElement('span');
-  value.innerHTML = layer;
-  item.appendChild(key);
-  item.appendChild(value);
-  legend.appendChild(item);
-}
-
 map.on('mousemove', function(e) {
   var countries = map.queryRenderedFeatures(e.point, {
     layers: ['NAW']
