@@ -40,12 +40,11 @@
            <h3>Content..</h3>
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
-              <div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
-              
-                <script>
-		<div class='map-overlay' id='features'><h2>Nasal Aperture Width</h2>
+              <div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'>
+              	<div class='map-overlay' id='features'><h2>Nasal Aperture Width</h2>
               	<div id='pd'><p>Hover over a country!</p></div></div>
-              	<div class='map-overlay' id='legend'></div>
+              </div>
+		<script>
 		mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
                 var NAWmap = new mapboxgl.Map({
                 container: 'NAWmap',
@@ -54,26 +53,26 @@
                 zoom: 1.5
                 });
 
-map.on('load', function() {
-  var layers = ['0-25', '26-50', '51-75', '76-100'];
-  var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
+		map.on('load', function() {
+  			var layers = ['0-25', '26-50', '51-75', '76-100'];
+  			var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
   
-map.on('mousemove', function(e) {
-  var countries = map.queryRenderedFeatures(e.point, {
-    layers: ['NAW']
-  });
+		map.on('mousemove', function(e) {
+  			var countries = map.queryRenderedFeatures(e.point, {
+    			layers: ['NAW']
+  		});
 
-  if (countries.length > 0) {
-    document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> people per square mile</em></p>';
-  } else {
-    document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
-  }
-});
+  		if (countries.length > 0) {
+    		document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> people per square mile</em></p>';
+  		} else {
+    		document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
+  		}
+		});
 
-map.getCanvas().style.cursor = 'default';
+		map.getCanvas().style.cursor = 'default';
 
-});
-</script>
+		});
+		</script>
 
 			
 			
