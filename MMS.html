@@ -45,7 +45,7 @@
               <div id='pd'><p>Hover over a country!</p></div></div>
               <div class='map-overlay' id='legend'></div>
                 <script>
-				mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+		mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
                 var NAWmap = new mapboxgl.Map({
                 container: 'NAWmap',
                 style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
@@ -53,13 +53,10 @@
                 zoom: 1.5
                 });
 
-
 map.on('load', function() {
   var layers = ['0-25', '26-50', '51-75', '76-100'];
   var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
-
-});
-
+  
 for (i = 0; i < layers.length; i++) {
   var layer = layers[i];
   var color = colors[i];
@@ -80,16 +77,20 @@ map.on('mousemove', function(e) {
     layers: ['NAW']
   });
 
-  if (countries.length > 0) {
-    document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> people per square mile</em></p>';
+  if (NAW.length > 0) {
+    document.getElementById('pd').innerHTML = '<h3><strong>' + NAW[0].properties.name + '</strong></h3><p><strong><em>' + NAW[0].properties.density + '</strong> people per square mile</em></p>';
   } else {
-    document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
+    document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
   }
 });
 
 map.getCanvas().style.cursor = 'default';
 
+});
 </script>
+
+			
+			
               <div id='ANSmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
