@@ -41,33 +41,55 @@
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
               <div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
-              <div class='map-overlay' id='freq'><h2>Nasal Aperture Width Frequencies</h2>
+              <div class='map-overlay' id='features'><h2>Nasal Aperture Width Frequencies</h2>
               <div id='pd'><p>Hover over a country!</p></div></div>
               <div class='map-overlay' id='legend'></div>
                 <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-                const NAWmap = new mapboxgl.Map({
+				mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+                var NAWmap = new mapboxgl.Map({
                 container: 'NAWmap',
                 style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
                 center: [20, 0.331443],
                 zoom: 1.5
                 });
-                  
-                  for (i = 0; i < layers.length; i++) {
-                  var layer = layers[i];
-                  var color = colors[i];
-                  var item = document.createElement('div');
-                  var key = document.createElement('span');
-                  key.className = 'legend-key';
-                  key.style.backgroundColor = color;
 
-                  var value = document.createElement('span');
-                  value.innerHTML = layer;
-                  item.appendChild(key);
-                  item.appendChild(value);
-                  legend.appendChild(item);
-                }
-                </script> 
+
+map.on('load', function() {
+  var layers = ['0-25', '26-50', '51-75', '76-100'];
+  var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
+
+});
+
+for (i = 0; i < layers.length; i++) {
+  var layer = layers[i];
+  var color = colors[i];
+  var item = document.createElement('div');
+  var key = document.createElement('span');
+  key.className = 'legend-key';
+  key.style.backgroundColor = color;
+
+  var value = document.createElement('span');
+  value.innerHTML = layer;
+  item.appendChild(key);
+  item.appendChild(value);
+  legend.appendChild(item);
+}
+
+map.on('mousemove', function(e) {
+  var countries = map.queryRenderedFeatures(e.point, {
+    layers: ['statedata']
+  });
+
+  if (states.length > 0) {
+    document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>' + states[0].properties.density + '</strong> people per square mile</em></p>';
+  } else {
+    document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+  }
+});
+
+map.getCanvas().style.cursor = 'default';
+
+</script>
               <div id='ANSmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
