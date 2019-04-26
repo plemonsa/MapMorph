@@ -77,13 +77,13 @@ for (i = 0; i < layers.length; i++) {
 
 map.on('mousemove', function(e) {
   var countries = map.queryRenderedFeatures(e.point, {
-    layers: ['statedata']
+    layers: ['NAW']
   });
 
-  if (states.length > 0) {
-    document.getElementById('pd').innerHTML = '<h3><strong>' + states[0].properties.name + '</strong></h3><p><strong><em>' + states[0].properties.density + '</strong> people per square mile</em></p>';
+  if (countries.length > 0) {
+    document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> people per square mile</em></p>';
   } else {
-    document.getElementById('pd').innerHTML = '<p>Hover over a state!</p>';
+    document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
   }
 });
 
