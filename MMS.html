@@ -47,7 +47,7 @@
 		mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
                 var NAWmap = new mapboxgl.Map({
                 container: 'NAWmap',
-                style: 'mapbox://styles/plemonsa/cjtixo5h228jj1fmrh7l3w091',
+                style: 'mapbox://styles/plemonsa/cjv45k30l18je1fo0kczbf0xc',
                 center: [15, 0.331443],
                 zoom: 1.5
                 });
@@ -58,7 +58,7 @@
   
 		map.on('mousemove', function(e) {
   			var countries = map.queryRenderedFeatures(e.point, {
-    			layers: ['NAW']
+    			layers: ['NAWdensity']
   		});
 
   		if (countries.length > 0) {
