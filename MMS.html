@@ -59,13 +59,13 @@
   
 		map.on('mousemove', function(e) {
   			var countries = map.queryRenderedFeatures(e.point, {
-    			layers: ['NAWmap']
+    			layers: ['NAWdensity']
   			});
 
   			if (countries.length > 0) {
    			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> frequency of wide NAW</em></p>';
   			} else {
-    			document.getElementById('pd').innerHTML = '<p>Hover over a country!</p>';
+    			document.getElementById('pd').innerHTML = '<p>Hover over a country</p>';
   			}
 			});
 
