@@ -55,6 +55,7 @@
 		map.on('load', function() {
   			var layers = ['0-25', '26-50', '51-75', '76-100'];
   			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
+			});
 			
 			for (i = 0; i < layers.length; i++) {
   			var layer = layers[i];
@@ -88,7 +89,9 @@
 		</script>
 	     </div>
 
-             <div id='IOBmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
+             <div id='IOBmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'>
+	     <div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3>
+             <div id='pd'><p>Hover over a country</p></div></div>
                 <script>
                 mapboxg1.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
                 const IOBmap = new mapboxg1.Map({
@@ -97,7 +100,10 @@
                 center: [20, 0.331443],
                 zoom: 1.5
                 });
-		 </script>
+		</script>
+	     </div>
+		     
+		     
             <div id='PBDmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
                 mapboxg1.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
