@@ -40,7 +40,7 @@
            <h3>Content</h3>
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
-		<div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
+		<div id='NAWmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'>
               	<div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3>
               	<div id='pd'><p>Hover over a country</p></div></div>
 		<script>
@@ -63,7 +63,7 @@
   			});
 
   			if (countries.length > 0) {
-   			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[1].properties.name + '</strong></h3><p><strong><em>' + countries[1].properties.density + '</strong> frequency of wide NAW</em></p>';
+   			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> frequency of wide NAW</em></p>';
   			} else {
     			document.getElementById('pd').innerHTML = '<p>Hover over a country</p>';
   			}
@@ -71,6 +71,7 @@
 
 		map.getCanvas().style.cursor = 'default';
 		</script>
+	     </div>
 
              <div id='IOBmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
