@@ -54,16 +54,16 @@
 
 		map.on('load', function() {
   			var layers = ['0-25', '26-50', '51-75', '76-100'];
-  			var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C'];
+  			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
 			});
   
 		map.on('mousemove', function(e) {
   			var countries = map.queryRenderedFeatures(e.point, {
-    			layers: ['NAWdensity']
+    			layers: ['nawdensity']
   			});
 
   			if (countries.length > 0) {
-   			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> frequency of wide NAW</em></p>';
+   			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[1].properties.name + '</strong></h3><p><strong><em>' + countries[1].properties.density + '</strong> frequency of wide NAW</em></p>';
   			} else {
     			document.getElementById('pd').innerHTML = '<p>Hover over a country</p>';
   			}
