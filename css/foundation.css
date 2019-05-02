@@ -2249,13 +2249,14 @@ th,
 td {
   margin: 0;
   padding: 0; 
-  font-color: 0a0a0a}
+  font-color: #0a0a0a}
 
 p {
   margin-bottom: 1rem;
   font-size: inherit;
   line-height: 1.6;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility; 
+  font-color: #F2F0F0;}
 
 em,
 i {
@@ -2295,7 +2296,7 @@ h1, .h1 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: 0a0a0a;
+  font-color: #0a0a0a;
 }
 
 h2, .h2 {
@@ -2303,7 +2304,7 @@ h2, .h2 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: F2F0F0;
+  font-color: #F2F0F0;
 }
 
 h3, .h3 {
@@ -2311,7 +2312,7 @@ h3, .h3 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: 0a0a0a;
+  font-color: #0a0a0a;
 }
 
 h4, .h4 {
@@ -2319,7 +2320,7 @@ h4, .h4 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: F2F0F0;}
+  font-color: #F2F0F0;}
 }
 
 h5, .h5 {
@@ -2327,7 +2328,7 @@ h5, .h5 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: F2F0F0;}
+  font-color: #F2F0F0;}
 }
 
 h6, .h6 {
@@ -2335,7 +2336,7 @@ h6, .h6 {
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; 
-  font-color: F2F0F0;}
+  font-color: #F2F0F0;}
 }
 
 @media print, screen and (min-width: 40em) {
