@@ -56,22 +56,6 @@
   			var layers = ['0-25', '26-50', '51-75', '76-100'];
   			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
 			});
-			
-			for (i = 0; i < layers.length; i++) {
-  			var layer = layers[i];
-  			var color = colors[i];
-  			var item = document.createElement('div');
-  			var key = document.createElement('span');
-  			key.className = 'legend-key';
-  			key.style.backgroundColor = color;
-
-  			var value = document.createElement('span');
-  			value.innerHTML = layer;
-  			item.appendChild(key);
-  			item.appendChild(value);
-  			legend.appendChild(item);
-			}
-			});
   
 		map.on('mousemove', function(e) {
   			var countries = map.queryRenderedFeatures(e.point, {
@@ -89,30 +73,40 @@
 		</script>
 	     </div>
 
-             <div id='IOBmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'>
+             <div id='IOBmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'>
 	     <div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3>
              <div id='pd'><p>Hover over a country</p></div></div>
                 <script>
-                mapboxg1.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-                const IOBmap = new mapboxg1.Map({
-                container: 'IOBmap',
-                style: 'mapbox://styles/plemonsa/cjuo8gm8y08as1fpny5mbndva',
-                center: [20, 0.331443],
-                zoom: 1.5
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+		var IOBmap = new mapboxgl.Map({
+		container: 'IOBmap',
+		style: 'mapbox://styles/plemonsa/cjuo8gm8y08as1fpny5mbndva',
+                center: [35, 0.331443],
+                zoom: 1.3
                 });
+
+		map.on('load', function() {
+  			var layers = ['0-25', '26-50', '51-75', '76-100'];
+  			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
+			});
 		</script>
 	     </div>
 		     
 		     
-            <div id='PBDmap' style='width: 600px; height: 350px; top: 0px; bottom: 20px'></div>
+            <div id='PBDmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'></div>
                 <script>
-                mapboxg1.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
-                const PBDmap = new mapboxg1.Map({
-                container: 'PBDmap',
-                style: 'mapbox://styles/plemonsa/cjuo8gake0aiw1ft1mxy39ntl',
-                center: [20, 0.331443],
-                zoom: 1.5
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
+		var PBDmap = new mapboxgl.Map({
+		container: 'PBDmap',
+		style: 'mapbox://styles/plemonsa/cjuo8gake0aiw1ft1mxy39ntl',
+                center: [35, 0.331443],
+                zoom: 1.3
                 });
+
+		map.on('load', function() {
+  			var layers = ['0-25', '26-50', '51-75', '76-100'];
+  			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
+			});
                 </script>
 	  </div>
  
