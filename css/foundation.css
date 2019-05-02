@@ -2301,7 +2301,8 @@ h2, .h2 {
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+  font-color: FFFFFF;}
 
 h3, .h3 {
   font-size: 1.1875rem;
