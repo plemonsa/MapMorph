@@ -41,8 +41,7 @@
            <p>This website is pedagogical tool for understanding what shapes human variation.</p>
            <p>This is my content page for demonstrating how cranial variation is expressed across space and mapping MMS trait data.</p>
 		<div id='NAWmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'>
-              	<div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3>
-              	<div id='pd'><p>Hover over a country</p></div></div>
+              	<div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3></div>
 		<script>
 		mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
                 var NAWmap = new mapboxgl.Map({
@@ -56,26 +55,13 @@
   			var layers = ['0-25', '26-50', '51-75', '76-100'];
   			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
 			});
-  
-		map.on('mousemove', function(e) {
-  			var countries = map.queryRenderedFeatures(e.point, {
-    			layers: ['nawdensity']
-  			});
-
-  			if (countries.length > 0) {
-   			document.getElementById('pd').innerHTML = '<h3><strong>' + countries[0].properties.name + '</strong></h3><p><strong><em>' + countries[0].properties.density + '</strong> frequency of wide NAW</em></p>';
-  			} else {
-    			document.getElementById('pd').innerHTML = '<p>Hover over a country</p>';
-  			}
-			});
 
 		map.getCanvas().style.cursor = 'default';
 		</script>
 	     </div>
 
              <div id='IOBmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'>
-	     <div class='map-overlay' id='features'><h3>Interorbital Breadth</h3>
-             <div id='pd'><p>Hover over a country</p></div></div>
+	     <div class='map-overlay' id='features'><h3>Interorbital Breadth</h3></div>
                 <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
 		var IOBmap = new mapboxgl.Map({
