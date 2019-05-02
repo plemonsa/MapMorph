@@ -93,7 +93,9 @@
 	     </div>
 		     
 		     
-            <div id='PBDmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'></div>
+            <div id='PBDmap' style='width: 650px; height: 350px; top: 0px; bottom: 20px'>
+	    <div class='map-overlay' id='features'><h3>Nasal Aperture Width</h3>
+            <div id='pd'><p>Hover over a country</p></div></div>
                 <script>
                 mapboxgl.accessToken = 'pk.eyJ1IjoicGxlbW9uc2EiLCJhIjoiY2puNmJ4ZTM4MTk0cTNrcW95NmtwcWJnZiJ9.xdWhLsQeQKvK6nNXIWsIqg';
 		var PBDmap = new mapboxgl.Map({
@@ -108,6 +110,7 @@
   			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
 			});
                 </script>
+	    </div>
 	  </div>
  
           
