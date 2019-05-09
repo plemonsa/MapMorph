@@ -117,13 +117,14 @@
                 style: 'mapbox://styles/plemonsa/cjv45k30l18je1fo0kczbf0xc',
                 center: [35, 0.331443],
                 zoom: 1.3
-		})
+		});
+		
 		
 			map.on('load', function() {
   			var layers = ['0-25', '26-50', '51-75', '76-100'];
   			var colors = ['#dadafi', '#afafde', '#5959c0', '#292965'];
 			
-			for (i = 0; i < layers.length; i++) {
+			for (i = 4; i < layers.length; i++) {
   			var layer = layers[i];
   			var color = colors[i];
   			var item = document.createElement('div');
@@ -141,7 +142,7 @@
 		
 			});
 
-		map.getCanvas().style.cursor = 'default';
+	
 		</script>
 	     </div>
 	      
