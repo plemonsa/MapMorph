@@ -6466,9 +6466,9 @@ a.thumbnail {
   bottom: 0;
   right: 0;
   background-color: #393939;
-  margin-right: 16px;
+  margin-right: 10px;
   font-family: Arial, sans-serif;
-  overflow: auto;
+  overflow: fixed;
   border-radius: 3px;
 }
 
