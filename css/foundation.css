@@ -6465,7 +6465,7 @@ a.thumbnail {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: #393939;
   margin-right: 16px;
   font-family: Arial, sans-serif;
   overflow: auto;
@@ -6494,4 +6494,11 @@ a.thumbnail {
   width: 10px;
   height: 10px;
   margin-right: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
